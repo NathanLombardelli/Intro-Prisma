@@ -4,12 +4,12 @@ const prisma = new PrismaClient()
 
 async function main() {
     // READ WITH RELATION
-    const usersWithPosts = await prisma.user.findMany({
-        include: {
-            posts: true,
-        },
-    })
-    console.dir(usersWithPosts, { depth: null })
+    // const usersWithPosts = await prisma.user.findMany({
+    //     include: {
+    //         posts: true,
+    //     },
+    // })
+    // console.dir(usersWithPosts, { depth: null })
 
     // CREATE WITH RELATION
     // const user = await prisma.user.create({
@@ -37,6 +37,24 @@ async function main() {
     //     },
     // })
     // console.log(user)
+
+    // DELETE
+    // const user = await prisma.user.delete({
+    //     where:{
+    //         id:1
+    //     }
+    // })
+
+    // UPDATE
+    // const user = await prisma.user.update({
+    //     where: {
+    //         id: 2,
+    //     },
+    //     data: {
+    //         name: 'Roger',
+    //     },
+    // })
+
 }
 
 main()
